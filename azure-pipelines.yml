@@ -33,8 +33,11 @@ steps:
     targetFolder: '$(build.artifactStagingDirectory)'
 
 
-- task: PublishBuildArtifacts@1
+- 
+- task: AzureWebApp@1
   inputs:
-    artifactName: 'war'
-    pathToPublish: '$(build.artifactStagingDirectory)'
-
+    azureSubscription: 'Free Trial(f8a473e5-bf01-41d8-928b-888e05407f6e)'
+    appType: 'webApp'
+    appName: 'muthuqw'
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    deploymentMethod: 'auto'
