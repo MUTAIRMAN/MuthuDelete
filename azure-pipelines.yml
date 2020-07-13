@@ -38,5 +38,11 @@ steps:
     ArtifactName: 'drop'
     publishLocation: 'Container'
 
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'Free Trial(f8a473e5-bf01-41d8-928b-888e05407f6e)'
+    appType: 'webApp'
+    appName: 'muthuqw'
+    package: '$(System.DefaultWorkingDirectory)/**/*.war'
     
   
