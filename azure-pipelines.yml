@@ -37,12 +37,6 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
     publishLocation: 'Container'
-- task: AzureWebApp@1
-  inputs:
-    azureSubscription: 'Free Trial(f8a473e5-bf01-41d8-928b-888e05407f6e)'
-    appType: 'webAppLinux'
-    appName: 'muthuTrial'
-    package: '$(System.DefaultWorkingDirectory)\**\*.zip'
-    runtimeStack: 'JAVA|8-jre8'
+
     
   
