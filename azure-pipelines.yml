@@ -43,5 +43,4 @@ steps:
     appType: 'webApp'
     appName: 'jokqq'
     package: '$(System.DefaultWorkingDirectory)/**/*.war'
-    
   
